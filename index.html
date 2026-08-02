@@ -12,6 +12,17 @@
 </head>
 <body>
 
+<div class="promo-bar" id="promoBar">
+  <div class="container promo-bar-inner">
+    <p class="promo-text">
+      <span class="promo-clock">⏰</span>
+      Oferta por tempo limitado — condições especiais nos próximos
+      <span class="promo-timer" id="promoTimer">15:00</span>
+    </p>
+    <a href="#produtos" class="promo-cta">Aproveitar agora</a>
+  </div>
+</div>
+
 <header class="site-header" id="header">
   <div class="container header-inner">
     <a href="#topo" class="logo">
@@ -24,8 +35,8 @@
     </a>
     <nav class="nav" id="nav">
       <a href="#beneficios">Benefícios</a>
-      <a href="#produtos">Produtos</a>
       <a href="#depoimentos">Depoimentos</a>
+      <a href="#produtos">Produtos</a>
       <a href="#contato">Contato</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
@@ -66,94 +77,38 @@
   <!-- BENEFICIOS -->
   <section class="beneficios" id="beneficios">
     <div class="container">
-      <h2 class="section-title reveal">Por que o alongamento ajuda</h2>
-      <p class="section-sub reveal">Pequenos hábitos diários de alongamento e liberação muscular podem reduzir dores crônicas, melhorar a postura e aumentar a mobilidade.</p>
+      <h2 class="section-title reveal">Para um minuto e imagine: como seria o seu dia sem essa dor?</h2>
+      <p class="section-sub reveal">Você já se acostumou a conviver com ela. Mas pare e pense — quantas coisas você deixou de fazer, de sentir, de aproveitar por causa dela? Não precisa continuar assim.</p>
       <div class="beneficios-grid">
         <div class="beneficio-card reveal">
           <div class="icon-circle">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 8l8-6 8 6M4 16l8 6 8-6"/></svg>
           </div>
-          <h3>Alivia dores</h3>
-          <p>Reduz tensão muscular acumulada nas costas, pescoço e pernas.</p>
+          <h3>Dormir a noite inteira</h3>
+          <p>Sem virar de um lado para o outro tentando achar uma posição que não doa. Só deitar e descansar de verdade.</p>
         </div>
         <div class="beneficio-card reveal">
           <div class="icon-circle">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
           </div>
-          <h3>Resultados rápidos</h3>
-          <p>Poucos minutos por dia já trazem sensação de alívio e relaxamento.</p>
+          <h3>Fazer o que você ama de novo</h3>
+          <p>Brincar com seus filhos no chão, sair para caminhar, sentar confortável no trabalho — sem pensar duas vezes antes.</p>
         </div>
         <div class="beneficio-card reveal">
           <div class="icon-circle">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-8-8"/><path d="M20 4l-8 8"/></svg>
           </div>
-          <h3>Mais mobilidade</h3>
-          <p>Melhora a flexibilidade e facilita os movimentos do dia a dia.</p>
+          <h3>Se mover sem medo</h3>
+          <p>Agachar, virar o pescoço, levantar da cama de manhã — gestos simples que a dor rouba de você, dia após dia.</p>
         </div>
         <div class="beneficio-card reveal">
           <div class="icon-circle">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C.7 8.6 2.4 5 6 5c2 0 3.5 1.2 4 2.5C10.5 6.2 12 5 14 5c3.6 0 5.3 3.6 3.5 7.5C19 16.65 12 21 12 21z"/></svg>
           </div>
-          <h3>Feito com cuidado</h3>
-          <p>Produtos escolhidos pensando em conforto e uso seguro no dia a dia.</p>
+          <h3>Recuperar seu bom humor</h3>
+          <p>Dor constante cansa mais do que o corpo — ela desgasta a sua paciência, seu ânimo, quem você é no dia a dia. Cuidar dela é cuidar de você.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section class="produtos" id="produtos">
-    <div class="container">
-      <h2 class="section-title reveal">Nossos produtos</h2>
-      <p class="section-sub reveal">Selecionados especialmente para alongamento e alívio de dores no corpo.</p>
-
-      <div class="produtos-grid">
-
-        <article class="produto-card reveal">
-          <div class="produto-img">
-            <svg viewBox="0 0 120 120" width="70%" height="70%">
-              <rect x="20" y="55" width="80" height="10" rx="5" fill="#4ecdc4"/>
-              <circle cx="20" cy="60" r="10" fill="#2a9d8f"/>
-              <circle cx="100" cy="60" r="10" fill="#2a9d8f"/>
-            </svg>
-          </div>
-          <div class="produto-body">
-            <h3>Faixa Elástica de Alongamento</h3>
-            <p>Com alças para apoiar pernas, ombros e costas durante o alongamento. Ideal para iniciantes e uso diário.</p>
-            <a href="#" class="btn btn-primary btn-block produto-link" data-produto="faixa-elastica">Comprar no Mercado Livre</a>
-          </div>
-        </article>
-
-        <article class="produto-card reveal">
-          <div class="produto-img">
-            <svg viewBox="0 0 120 120" width="70%" height="70%">
-              <rect x="20" y="40" width="80" height="40" rx="20" fill="#4ecdc4"/>
-              <rect x="20" y="40" width="80" height="40" rx="20" fill="none" stroke="#2a9d8f" stroke-width="3"/>
-            </svg>
-          </div>
-          <div class="produto-body">
-            <h3>Rolo de Espuma (Foam Roller)</h3>
-            <p>Liberação miofascial para aliviar dores musculares e melhorar a circulação após o treino ou no fim do dia.</p>
-            <a href="#" class="btn btn-primary btn-block produto-link" data-produto="rolo-espuma">Comprar no Mercado Livre</a>
-          </div>
-        </article>
-
-        <article class="produto-card reveal">
-          <div class="produto-img">
-            <svg viewBox="0 0 120 120" width="70%" height="70%">
-              <circle cx="60" cy="60" r="32" fill="#4ecdc4"/>
-              <circle cx="60" cy="60" r="32" fill="none" stroke="#2a9d8f" stroke-width="3"/>
-            </svg>
-          </div>
-          <div class="produto-body">
-            <h3>Bola de Massagem</h3>
-            <p>Ideal para pontos específicos de tensão, como ombros, lombar e sola dos pés.</p>
-            <a href="#" class="btn btn-primary btn-block produto-link" data-produto="bola-massagem">Comprar no Mercado Livre</a>
-          </div>
-        </article>
-
-      </div>
-      <p class="produtos-nota reveal">* Links de compra serão adicionados em breve.</p>
     </div>
   </section>
 
@@ -175,6 +130,66 @@
           <span>— Juliana R.</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <h2 class="section-title reveal">Nossos produtos</h2>
+      <p class="section-sub reveal">Selecionados especialmente para alongamento e alívio de dores no corpo.</p>
+
+      <div class="produtos-grid">
+
+        <article class="produto-card produto-card--side produto-card--left reveal">
+          <div class="produto-img">
+            <svg viewBox="0 0 120 120" width="70%" height="70%">
+              <rect x="20" y="55" width="80" height="10" rx="5" fill="#4ecdc4"/>
+              <circle cx="20" cy="60" r="10" fill="#2a9d8f"/>
+              <circle cx="100" cy="60" r="10" fill="#2a9d8f"/>
+            </svg>
+          </div>
+          <div class="produto-body">
+            <h3>Faixa Elástica de Alongamento</h3>
+            <p>Com alças para apoiar pernas, ombros e costas durante o alongamento. Ideal para iniciantes e uso diário.</p>
+            <a href="#" class="btn btn-primary btn-block produto-link" data-produto="faixa-elastica">Comprar no Mercado Livre</a>
+          </div>
+        </article>
+
+        <article class="produto-card produto-card--popular reveal">
+          <div class="produto-badge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Mais vendido
+          </div>
+          <div class="produto-img">
+            <svg viewBox="0 0 120 120" width="70%" height="70%">
+              <rect x="20" y="40" width="80" height="40" rx="20" fill="#4ecdc4"/>
+              <rect x="20" y="40" width="80" height="40" rx="20" fill="none" stroke="#2a9d8f" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="produto-body">
+            <h3>Rolo de Espuma (Foam Roller)</h3>
+            <p>Liberação miofascial para aliviar dores musculares e melhorar a circulação após o treino ou no fim do dia.</p>
+            <a href="#" class="btn btn-primary btn-block produto-link" data-produto="rolo-espuma">Comprar no Mercado Livre</a>
+          </div>
+        </article>
+
+        <article class="produto-card produto-card--side produto-card--right reveal">
+          <div class="produto-img">
+            <svg viewBox="0 0 120 120" width="70%" height="70%">
+              <circle cx="60" cy="60" r="32" fill="#4ecdc4"/>
+              <circle cx="60" cy="60" r="32" fill="none" stroke="#2a9d8f" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="produto-body">
+            <h3>Bola de Massagem</h3>
+            <p>Ideal para pontos específicos de tensão, como ombros, lombar e sola dos pés.</p>
+            <a href="#" class="btn btn-primary btn-block produto-link" data-produto="bola-massagem">Comprar no Mercado Livre</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="produtos-nota reveal">* Links de compra serão adicionados em breve.</p>
     </div>
   </section>
 

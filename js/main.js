@@ -1,5 +1,22 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const promoTimerEl = document.getElementById('promoTimer');
+let promoSeconds = 15 * 60;
+
+function updatePromoTimer() {
+  const minutes = Math.floor(promoSeconds / 60);
+  const seconds = promoSeconds % 60;
+  promoTimerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  if (promoSeconds <= 0) {
+    promoSeconds = 15 * 60;
+  } else {
+    promoSeconds -= 1;
+  }
+}
+
+updatePromoTimer();
+setInterval(updatePromoTimer, 1000);
+
 const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('nav');
 
