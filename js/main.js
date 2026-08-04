@@ -1,12 +1,13 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const promoTimerEl = document.getElementById('promoTimer');
+const promoTimerEls = document.querySelectorAll('.promo-timer');
 let promoSeconds = 15 * 60;
 
 function updatePromoTimer() {
   const minutes = Math.floor(promoSeconds / 60);
   const seconds = promoSeconds % 60;
-  promoTimerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  const text = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  promoTimerEls.forEach((el) => { el.textContent = text; });
   if (promoSeconds <= 0) {
     promoSeconds = 15 * 60;
   } else {
@@ -16,17 +17,6 @@ function updatePromoTimer() {
 
 updatePromoTimer();
 setInterval(updatePromoTimer, 1000);
-
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
-
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('is-open');
-});
-
-nav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => nav.classList.remove('is-open'));
-});
 
 const depoimentos = [
   {
@@ -66,55 +56,26 @@ const depoimentos = [
   },
 ];
 
-const depoimentosTrack = document.getElementById('depoimentosTrack');
-let depoimentoIndex = 0;
+const depoimentosGrid = document.getElementById('depoimentosGrid');
 
-function renderDepoimentoSlide(item, position) {
-  const slide = document.createElement('article');
-  slide.className = `depoimento-slide depoimento-slide--${position}`;
-  slide.innerHTML = `
+function renderDepoimentoCard(item) {
+  const card = document.createElement('article');
+  card.className = 'depoimento-grid-card reveal';
+  const stars = '★★★★★';
+  card.innerHTML = `
+    <div class="depoimento-stars">${stars}</div>
     <p class="depoimento-quote">"${item.quote}"</p>
-    <div class="depoimento-person">
-      <span class="depoimento-avatar">${item.nome.charAt(0)}</span>
-      <div class="depoimento-name-wrap">
-        <span class="depoimento-name">${item.nome}</span>
-        <span class="depoimento-role">${item.papel}</span>
-      </div>
-    </div>
+    <span class="depoimento-name">${item.nome}<span class="depoimento-role">${item.papel}</span></span>
   `;
-  return slide;
+  return card;
 }
 
 function renderDepoimentos() {
-  const total = depoimentos.length;
-  const leftIndex = (depoimentoIndex - 1 + total) % total;
-  const rightIndex = (depoimentoIndex + 1) % total;
-
-  depoimentosTrack.innerHTML = '';
-  depoimentosTrack.appendChild(renderDepoimentoSlide(depoimentos[leftIndex], 'side'));
-  depoimentosTrack.appendChild(renderDepoimentoSlide(depoimentos[depoimentoIndex], 'center'));
-  depoimentosTrack.appendChild(renderDepoimentoSlide(depoimentos[rightIndex], 'side'));
+  depoimentosGrid.innerHTML = '';
+  depoimentos.forEach((item) => {
+    depoimentosGrid.appendChild(renderDepoimentoCard(item));
+  });
 }
-
-document.getElementById('depoNext').addEventListener('click', () => {
-  depoimentoIndex = (depoimentoIndex + 1) % depoimentos.length;
-  renderDepoimentos();
-});
-
-document.getElementById('depoPrev').addEventListener('click', () => {
-  depoimentoIndex = (depoimentoIndex - 1 + depoimentos.length) % depoimentos.length;
-  renderDepoimentos();
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight') {
-    depoimentoIndex = (depoimentoIndex + 1) % depoimentos.length;
-    renderDepoimentos();
-  } else if (e.key === 'ArrowLeft') {
-    depoimentoIndex = (depoimentoIndex - 1 + depoimentos.length) % depoimentos.length;
-    renderDepoimentos();
-  }
-});
 
 renderDepoimentos();
 
