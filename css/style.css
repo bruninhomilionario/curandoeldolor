@@ -120,6 +120,35 @@ h1, h2, h3 {
   transition: transform 0.2s ease;
 }
 .promo-cta:hover { transform: translateY(-1px); }
+.promo-text-short { display: none; }
+
+@media (max-width: 600px) {
+  .promo-bar--top .promo-bar-inner {
+    padding: 6px 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .promo-bar--top .promo-text {
+    font-size: 0.7rem;
+    gap: 5px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .promo-bar--top .promo-text-full { display: none; }
+  .promo-bar--top .promo-text-short { display: inline; }
+  .promo-bar--top .promo-clock { font-size: 0.8rem; }
+  .promo-bar--top .promo-timer {
+    padding: 1px 8px;
+    min-width: 44px;
+    font-size: 0.7rem;
+  }
+  .promo-bar--top .promo-cta {
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+}
 
 /* Header */
 .site-header {
